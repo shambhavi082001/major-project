@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<style>
+    body{
+        background: blanchedalmond;
+    }
+    .wrapper{
+        position: relative;
+        height: 20rem;
+        margin: 5px;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+    }
+    .wrapper img{
+        display: block;
+        z-index: 1;
+        height: inherit;
+        object-fit: cover;
+        aspect-ratio: 2/1;
+        position: absolute;
+
+    }
+    .wrapper .content{
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        z-index: 2;
+    }
+</style>
+{% endblock %}
+{% block body %}
+
+<div class="container vh-100">
+    <div class="row">
+        <div class="col-md-8 mx-auto my-5">
+            <h1 class="text-center">ARQ 🖥️</h1>
+            <div class="container-fluid">
+                <div class="row" >
+                    <div class="col-md-6 p-3">
+                        <div class="wrapper">
+                            <img src="/static/images/dummy.png" class="img-fluid shadow-sm" alt="">
+                            <div class="content">
+                                <p class="text-center">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                </p>
+                                <a  class="btn btn-block btn-outline-dark" href="/admin">
+                                    Add Questions
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="wrapper">
+                            <img src="/static/images/dummy.png" class="img-fluid shadow-sm" alt="">
+                            <div class="content">
+                                <p>Click to start your ar quiz</p>
+                                <a href="/video" class="btn btn-block btn-outline-dark">
+                                    Start Quiz
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block js %}{% endblock %}

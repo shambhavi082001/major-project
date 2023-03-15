@@ -1,0 +1,25 @@
+
+<!-- {% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto my-1">
+        <img src="{{ url_for('video') }}" class="img-fluid shadow-lg" width="100%">
+      </div>
+    </div>
+  </div>
+{% endblock %} -->
+
+{% extends 'base.html' %}
+
+{% block css %}{% endblock %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto my-1">
+      <img src="{{ url_for('video') }}" class="img-fluid shadow-lg" width="100%">
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block js %}{% endblock %}
+

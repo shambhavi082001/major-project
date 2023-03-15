@@ -1,0 +1,4 @@
+flask
+opencv
+medipipe
+sqlalchemy

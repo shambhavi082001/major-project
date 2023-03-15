@@ -1,0 +1,86 @@
+
+<!-- b4-$ for generating html page -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>{{title}}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--fa5-$-css this is for adding icon system-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <!--fblock for adding a block-->
+    
+    
+</head>
+
+<body>
+    
+    {% block css %}
+    <style>
+        body{
+                background-color: blanchedalmond;
+                background-repeat: no-repeat;
+                background-position: right;
+        }
+    </style>
+
+    {% endblock %}  <!--block css-->
+    <!--b4-nav-ul for creating basic menu-->
+    <ul class="nav justify-content-center">
+
+        <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+        </li>
+        <!--fife for conditional expression-->
+        {% if not session.isauth %}
+        <li class="nav-item">
+            <a class="nav-link" href="/">login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/signup">Register</a>
+        </li>
+        
+        {% else %}
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">logout</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/video">detection</a>
+        </li>
+        
+        <li class="nav-item">
+            <a class="nav-link" href="/admin">Admin</a>
+        </li>
+        
+        {% endif %}
+        
+        
+    </ul>
+    {% block body %}{% endblock %} 
+    <!-- example or dummy footer -->
+    <ul class="nav justify-content-center">
+        <!--<li class="nav-item">
+            <a class="nav-link active" href="#">footer link</a>
+        </li>-->
+        
+    </ul>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"crossorigin="anonymous"></script>
+    <!--fa5-$-js-->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    {% block js %}{% endblock %}
+</body>
+
+</html>

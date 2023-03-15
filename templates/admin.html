@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+{% block css%}
+<style>
+    body{
+            background-color: blanchedalmond;
+            background-image: url('/static/images/register_page_hero.svg') ;
+            background-repeat: no-repeat;
+            background-position: right;
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="card shadow-lg m-4">
+                <div class="card-header">
+                    <div class="card-title"><h2>Question form for Admin</h2></div>
+                </div>
+                <form method="POST" class="p2">
+                    <div class="form-group">
+                      <label for="question">Question</label>
+                      <input type="text"
+                        class="form-control" name="question" id="question" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="option1">A</label>
+                      <input type="text"
+                        class="form-control" name="option1" id="option1" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="option2">B</label>
+                      <input type="text"
+                        class="form-control" name="option2" id="option2" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="option3">C</label>
+                      <input type="text"
+                        class="form-control" name="option3" id="option3" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="option4">D</label>
+                      <input type="text"
+                        class="form-control" name="option4" id="option4" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                      <label for="answer">Answer</label>
+                      <input type="text"
+                        class="form-control" name="answer" id="answer" aria-describedby="helpId" placeholder="">
+                      <small id="helpId" class="form-text text-muted"></small>
+                    </div>
+                    <button  class="btn btn-success btn-block">Submit</button>
+                </form>
+            </div> 
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}{% endblock %}
+
+
+
+
+
